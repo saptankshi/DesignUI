@@ -6,11 +6,12 @@ This template provides a minimal setup to get React working in Vite with Hot Mod
 
 I have implemented a Figma design into this website, focusing exclusively on laptop compatibility to showcase my skills in front-end development. 
 
-### Features
+### Features 1
 
 - Implemented a pixel-perfect design based on Figma mockups.
 - Responsive layout tailored for laptop screens.
 - Clean and maintainable code.
+- Added Phone view also
 
 ## Getting Started
 
