@@ -1,0 +1,120 @@
+#root {
+  max-width: 100vw;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.button {
+  position: relative;
+  display:inline-flex;
+	border: none;
+  min-width: 120px;
+  min-height: 32px;
+}
+
+.button-text {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: black;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+
+.button-background {
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	bottom: 1px;
+	left: 1px;
+ 	border-radius: 20px;
+	background: linear-gradient(-180deg, #00FB87, #7D22FF);
+	background-size: 100% 100%;
+	border: none;
+	padding: 0;
+	margin: 0;
+	animation: backgroundAnimation 8s ease-in-out infinite
+}
+
+
+
+.button-background:after {
+	content: "";
+	position: absolute;
+	background-size: inherit;
+	background-image: inherit;
+	-webkit-animation: inherit;
+  border-radius: 20px;
+	animation: inherit;
+	left: 0;
+	right: 0;
+	top: 2px;
+	height: 10%;
+	filter: blur(.25rem)
+}
+
+/* inspired by vercel collaboration button */
+
+
+.shine-border {
+  background: linear-gradient(90deg, transparent, white, transparent);
+  animation: shine 0s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.shine-shadow {
+  border-bottom: 2px solid white; 
+  box-shadow: -2px -2px 5px 1px rgba(0, 251, 135, 0.6), 
+  2px 2px 5px 1px rgba(125, 34, 255, 0.6);
+}
+.custom-shadow {
+  box-shadow: 0 4px 15px rgba(0, 251, 135, 0.5), 0 -4px 15px rgba(125, 34, 255, 0.5); 
+}
