@@ -16,7 +16,7 @@ function App() {
     };
 
     window.addEventListener('hashchange', handleHashChange);
-    handleHashChange(); // Run on mount
+    handleHashChange(); 
 
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
