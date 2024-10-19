@@ -5,7 +5,7 @@ import ImageGrid from './ImageGrid';
 
 function MainContent() {
   return (
-    <main className="flex flex-col w-full  mx-auto items-center justify-center align-center xs:max-w-[600px] max-w-[1250px] ">
+    <main className="flex flex-col w-full  mx-auto items-center justify-center align-center xs:max-w-[800px] max-w-[1250px] ">
       <Header />
       <ContentTabs />
       <ImageGrid />

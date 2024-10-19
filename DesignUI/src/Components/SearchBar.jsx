@@ -18,9 +18,9 @@ function SearchBar() {
   ];
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <form
-        className="flex items-center px-[50px] py-1 w-full text-xs tracking-tighter leading-none text-center rounded-full border border-solid bg-neutral-800 border-white border-opacity-10 text-orange-100 text-opacity-60"
+        className="flex  items-center md:px-[50px] px-[5px] md:mt-0 mt-5 py-1 w-full text-xs tracking-tighter leading-none text-center rounded-full border border-solid bg-neutral-800 border-white border-opacity-10 text-orange-100 text-opacity-60"
       >
         <div className="flex flex-row items-center justify-start w-full ">
           <div type="submit" aria-label="Search">
@@ -39,7 +39,7 @@ function SearchBar() {
             type="text"
             id="searchInput"
             placeholder={placeholderText}
-            className="w-full h-[3rem] bg-transparent border-none text-orange-100 text-opacity-60 placeholder-orange-100 placeholder-opacity-60 focus:outline-none"
+            className="w-full md:h-[3rem] h-[1.8rem] bg-transparent border-none text-orange-100 text-opacity-60 placeholder-orange-100 placeholder-opacity-60 focus:outline-none"
             onFocus={() => {
               setShowSuggestions(true);
               setPlaceholderText('SearchComet...');
@@ -55,7 +55,7 @@ function SearchBar() {
               loading="lazy"
               src="/paint.svg"
               alt=""
-              className="object-contain shrink-0 w-5 h-5 ml-2"
+              className="object-contain shrink-0 w-5 h-5 ml-0 md:ml-2"
             />
           </button>
         </div>
@@ -65,7 +65,7 @@ function SearchBar() {
         <div className="absolute top-full mt-2 bg-neutral-800 rounded-lg p-4 w-full border border-white border-opacity-10 z-10">
           <div className="mb-4">
             <h3 className="text-white  text-sm mb-2"> Trending</h3>
-            <div className="grid grid-cols-4 gap-2">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
     {['Romance', 'Wisdom', 'Adventure', 'Fantasy'].map((topic) => (
       <div
         key={topic}
@@ -80,7 +80,7 @@ function SearchBar() {
           {/* Trending Colors Section */}
           <div className="mb-4">
             <h3 className="text-white text-sm mb-2"> Colors</h3>
-            <div className="grid grid-cols-4 gap-2">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5  md:gap-2">
               {trendingColors.map((color) => (
                 <div key={color.code} className="flex flex-row gap-2 text-white bg-neutral-700 p-2 rounded-lg text-center">
                   <div
@@ -96,7 +96,7 @@ function SearchBar() {
           {/* Fashion Section */}
           <div className="mb-4">
   <h3 className="text-white text-sm mb-2">Trending in Fashion</h3>
-  <div className="grid grid-cols-3 gap-3">
+  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
     {fashionTrends.map((trend) => (
       <div key={trend.name} className="bg-neutral-700 p-2 pr-3 rounded-lg flex items-center">
         <img

@@ -10,6 +10,7 @@
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+  
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -46,6 +47,12 @@
 	border: none;
   min-width: 120px;
   min-height: 32px;
+}
+@media (max-width: 768px) {
+  .button {
+    min-width: 70px; 
+    min-height: 27px;  
+  }
 }
 
 .button-text {

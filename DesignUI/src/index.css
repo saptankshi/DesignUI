@@ -16,7 +16,10 @@ body {
   height: 110vh; 
   z-index: 1; 
 }
-
+@media (max-width: 768px) {
+  .bg-image {
+  }
+}
 .bg-image::before {
   content: '';
   position: absolute;

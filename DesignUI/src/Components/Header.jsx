@@ -22,8 +22,9 @@ function Header() {
   ];
 
   return (
-    <header className="flex flex-col px-11 pt-11 w-full bg-[#131313] max-md:px-5 max-md:max-w-full">
-      <nav className="flex gap-5 justify-between items-center w-full max-md:max-w-full">
+    <>
+    <header className="flex flex-col overflow-hidden px-11 pt-11 w-full bg-[#131313] max-md:px-5 md:max-w-full">
+      <nav className="flex gap-5 justify-between items-center md:w-full md:max-w-full">
         <div className="flex gap-5 self-stretch my-auto text-xs tracking-tighter leading-none text-center text-orange-100 whitespace-nowrap">
          <Link to="/">
                   <Logo />
@@ -33,8 +34,10 @@ function Header() {
             <NavItem key={index} text={item.text} isActive={item.isActive} />
           ))}
         </div>
+        <div className='hidden md:block'>
         <SearchBar />
-        <div className="flex gap-4  items-center self-stretch my-auto">
+        </div>
+        <div className="flex gap-4 hidden md:flex items-center self-stretch my-auto">
           {iconButtons.map((button, index) => (
             <IconButton key={index} src={button.src} alt={button.alt} />
           ))}
@@ -43,6 +46,13 @@ function Header() {
         </div>
       </nav>
     </header>
+    <div className='block md:hidden'>
+
+    <SearchBar />
+    </div>
+
+
+    </>
   );
 }
 
