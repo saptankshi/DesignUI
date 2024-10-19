@@ -2,8 +2,15 @@ import React from "react";
 import Footer from "./Footer";
 import Button from "./Button";
 import Logo from '../Components/Logo';
+import { useNavigate, Link } from "react-router-dom"; 
 
 function MyComponent() {
+  const navigate = useNavigate(); 
+
+  const handleGetInspiredClick = () => {
+    navigate("/Components/MainLayout"); 
+  };
+
   return (
     
     <main className="relative flex flex-col items-center px-9 pt-11 pb-7 w-full max-md:px-5 max-md:max-w-full bg-image">
@@ -22,11 +29,11 @@ function MyComponent() {
         </div>
         <div className="relative flex justify-between items-center border-[1px] px-4 rounded-[8rem] border-[#666665] text-[#c9c7c7]">
 
-              <a href="#/Components/MainLayout" className="text-lg cursor-pointer">Login</a>
-                 <div className="absolute bottom-0 left-0 ml-5 mt-3 w-1/2 h-[1px] shine-border"></div>
-             </div>
-             <div className="relative flex justify-between bg-[#FCFCD8] rounded-3xl px-4 items-center text-black border-white border-2 shine-shadow">
-  <a href="#/Components/MainLayout" className="text-lg cursor-pointer">Signup</a>
+        <Link to="/Components/MainLayout" className="text-lg cursor-pointer">Login</Link>
+            <div className="absolute bottom-0 left-0 ml-5 mt-3 w-1/2 h-[1px] shine-border"></div>
+          </div>
+          <div className="relative flex justify-between bg-[#FCFCD8] rounded-3xl px-4 items-center text-black border-white border-2 shine-shadow">
+            <Link to="/Components/MainLayout" className="text-lg cursor-pointer">Signup</Link>
   
     <div className="absolute bottom-0 left-0 w-full shine-border h-[2px]"></div>
 </div>
@@ -43,9 +50,8 @@ function MyComponent() {
         </div>
       </div>
       <div className="flex gap-5  justify-center items-start ml-16 max-w-full font-semibold text-center text-neutral-900 w-[234px] z-20">
-      <a href="#/Components/MainLayout">
-  <Button text="Get Inspired" />
-         </a>      </div>
+      <Button text="Get Inspired" onClick={handleGetInspiredClick} /> {/* Attach click handler */}
+      </div>
       <Footer />
     </main>
   );
