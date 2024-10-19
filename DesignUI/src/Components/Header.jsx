@@ -23,7 +23,7 @@ function Header() {
     <header className="flex flex-col px-11 pt-11 w-full bg-[#131313] max-md:px-5 max-md:max-w-full">
       <nav className="flex gap-5 justify-between items-center w-full max-md:max-w-full">
         <div className="flex gap-5 self-stretch my-auto text-xs tracking-tighter leading-none text-center text-orange-100 whitespace-nowrap">
-         <a href="/">
+         <a href="#/">
                   <Logo />
                   </a>
           <UpgradeButton />

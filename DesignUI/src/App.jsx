@@ -4,19 +4,24 @@ import MainLayout from './Components/MainLayout';
 import './App.css'
 
 function App() {
-  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+  const [componentToShow, setComponentToShow] = useState(<MyComponent />);
 
   useEffect(() => {
-    const handlePathChange = () => setCurrentPath(window.location.pathname);
-    window.addEventListener('popstate', handlePathChange);
-    return () => window.removeEventListener('popstate', handlePathChange);
+    const handleHashChange = () => {
+      if (window.location.hash === '#/Components/MainLayout') {
+        setComponentToShow(<MainLayout />);
+      } else {
+        setComponentToShow(<MyComponent />);
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    handleHashChange(); // Run on mount
+
+    return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
-  return (
-    <>
-      {currentPath === '/' ? <MyComponent /> : <MainLayout />}
-    </>
-  );
+  return <>{componentToShow}</>;
 }
 
 export default App;

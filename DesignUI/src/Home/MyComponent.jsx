@@ -22,11 +22,11 @@ function MyComponent() {
         </div>
         <div className="relative flex justify-between items-center border-[1px] px-4 rounded-[8rem] border-[#666665] text-[#c9c7c7]">
 
-              <a href="/Components/MainLayout" className="text-lg cursor-pointer">Login</a>
+              <a href="#/Components/MainLayout" className="text-lg cursor-pointer">Login</a>
                  <div className="absolute bottom-0 left-0 ml-5 mt-3 w-1/2 h-[1px] shine-border"></div>
              </div>
              <div className="relative flex justify-between bg-[#FCFCD8] rounded-3xl px-4 items-center text-black border-white border-2 shine-shadow">
-  <a href="/Components/MainLayout" className="text-lg cursor-pointer">Signup</a>
+  <a href="#/Components/MainLayout" className="text-lg cursor-pointer">Signup</a>
   
     <div className="absolute bottom-0 left-0 w-full shine-border h-[2px]"></div>
 </div>
@@ -43,7 +43,7 @@ function MyComponent() {
         </div>
       </div>
       <div className="flex gap-5  justify-center items-start ml-16 max-w-full font-semibold text-center text-neutral-900 w-[234px] z-20">
-      <a href="/Components/MainLayout">
+      <a href="#/Components/MainLayout">
   <Button text="Get Inspired" />
          </a>      </div>
       <Footer />
